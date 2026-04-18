@@ -10,9 +10,9 @@ st.set_page_config(page_title="AOG 零件维修资源规划", page_icon="✈️"
 
 
 def load_data():
-    aog_path = os.path.join(BASE_DIR,"aog_with_exchange_match.csv")
-    zsht_path = os.path.join(BASE_DIR,"ZSHT_202604141503.csv")
-    new_aog_path = os.path.join(BASE_DIR,"求援数据_with_pnr_id.csv")
+    aog_path = os.path.join(BASE_DIR, "data", "analysis", "aog_with_exchange_match.csv")
+    zsht_path = os.path.join(BASE_DIR, "data", "analysis", "ZSHT_202604141503.csv")
+    new_aog_path = os.path.join(BASE_DIR, "data", "analysis", "求援数据_with_pnr_id.csv")
 
     aog_df = pd.read_csv(aog_path)
     zsht_df = pd.read_csv(zsht_path)
