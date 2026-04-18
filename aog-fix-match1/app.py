@@ -14,9 +14,9 @@ def load_data():
     zsht_path = "ZSHT_202604141503.csv"
     new_aog_path = "求援数据_with_pnr_id.csv"
 
-    aog_df = pd.read_csv(BASE_DIR, aog_path)
-    zsht_df = pd.read_csv(BASE_DIR, zsht_path)
-    new_aog_df = pd.read_csv(BASE_DIR, new_aog_path)
+    aog_df = pd.read_csv.join(BASE_DIR, aog_path)
+    zsht_df = pd.read_csv.join(BASE_DIR, zsht_path)
+    new_aog_df = pd.read_csv.join(BASE_DIR, new_aog_path)
 
     aog_df["BEDAT"] = pd.to_datetime(
         aog_df["BEDAT"].astype(str), format="%Y%m%d", errors="coerce"
