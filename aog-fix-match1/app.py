@@ -10,13 +10,13 @@ st.set_page_config(page_title="AOG 零件维修资源规划", page_icon="✈️"
 
 
 def load_data():
-    aog_path = "aog_with_exchange_match.csv"
-    zsht_path = "ZSHT_202604141503.csv"
-    new_aog_path = "求援数据_with_pnr_id.csv"
+    aog_path = os.path.join(BASE_DIR,"aog_with_exchange_match.csv")
+    zsht_path = os.path.join(BASE_DIR,"ZSHT_202604141503.csv")
+    new_aog_path = os.path.join(BASE_DIR,"求援数据_with_pnr_id.csv")
 
-    aog_df = pd.read_csv.join(BASE_DIR, aog_path)
-    zsht_df = pd.read_csv.join(BASE_DIR, zsht_path)
-    new_aog_df = pd.read_csv.join(BASE_DIR, new_aog_path)
+    aog_df = pd.read_csv(aog_path)
+    zsht_df = pd.read_csv(zsht_path)
+    new_aog_df = pd.read_csv(new_aog_path)
 
     aog_df["BEDAT"] = pd.to_datetime(
         aog_df["BEDAT"].astype(str), format="%Y%m%d", errors="coerce"
