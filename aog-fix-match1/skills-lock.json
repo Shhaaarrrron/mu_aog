@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "dashboard-skills": {
+      "source": "morning-start/book-skills",
+      "sourceType": "github",
+      "computedHash": "b3f116dae8e5dbb256dcb9e5344df468bd0b03f1d1fb6634d2f7eefe9e8f82f9"
+    }
+  }
+}
